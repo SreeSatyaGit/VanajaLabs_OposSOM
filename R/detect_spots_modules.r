@@ -647,7 +647,7 @@ pipeline.detectCorrelationModules <- function(env)
 
 pipeline.detectKMeansModules <- function(env)
 {
-  n.cluster <- ceiling( env$preferences$dim.1stLvlSom / 2 )
+  n.cluster <- ceiling( env$preferences$dim.1stLvlSom / 10 )
   prototypes <- env$metadata[round(seq(1, env$preferences$dim.1stLvlSom^2, length.out=n.cluster)),]
   res <- kmeans(env$metadata, prototypes)
 
